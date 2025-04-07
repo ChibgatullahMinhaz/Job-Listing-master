@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Jobs } from './Jobs';
+import Search from './Search';
 
 const MainPage = () => {
     const [jobsdata, setJobData ]= useState([]);
@@ -20,6 +21,7 @@ const MainPage = () => {
     }, []);
     return (
         <div>
+            <Search></Search>
            <Jobs jobs={jobsdata}></Jobs>
         </div>
     );
